@@ -14,6 +14,9 @@ resp = json.loads(resp)
 for event in resp["events"]:
 	if (event['waiting'] > 0):
 		print event['title']
-		print u"    Accepted : " + str(event['accepted'])
-		print u"    Waited : " + str(event['waiting'])
+		print "    Limit : " + str(event['limit'])
+		print "    Accepted : " + str(event['accepted'])
+		print "    Waited : " + str(event['waiting'])
+		print "    Date: " + event['started_at']
+		print "    URL: " + "http://connpass.com/event/" + str(event['event_id'])
 		print "\n\n"
